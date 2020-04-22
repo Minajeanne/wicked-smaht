@@ -1,15 +1,11 @@
 import React from 'react';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import Application from "./components/Application";
+import UserProvider from "./providers/UserProvider";
 
 function App() {
   return (
-    <Router>
+    <UserProvider>
       <div className="App">
         <header className="App-header">
           <h1>
@@ -17,7 +13,7 @@ function App() {
           </h1>
         </header>
       </div>
-    </Router>
+    </UserProvider>
   );
 }
 
