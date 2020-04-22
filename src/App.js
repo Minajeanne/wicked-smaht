@@ -6,13 +6,7 @@ import UserProvider from "./providers/UserProvider";
 function App() {
   return (
     <UserProvider>
-      <div className="App">
-        <header className="App-header">
-          <h1>
-            Wicked Smaht
-          </h1>
-        </header>
-      </div>
+      <Application />
     </UserProvider>
   );
 }
