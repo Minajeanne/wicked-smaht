@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { signInWithGoogle } from '../firebase';
+import { auth, generateUserDocument, signInWithGoogle } from '../firebase';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -9,7 +9,7 @@ const SignUp = () => {
   const [error, setError] = useState(null);
   const createUserWithEmailAndPasswordHandler = async (event, email, password) => {
     event.preventDefault();
-    
+
     try{
       const {user} = await auth.createUserWithEmailAndPassword(email, password);
       generateUserDocument(user, {displayName});
@@ -19,7 +19,7 @@ const SignUp = () => {
     }
 
     setEmail('');
-    setPassword('';
+    setPassword('');
     setDisplayName('');
   };
 

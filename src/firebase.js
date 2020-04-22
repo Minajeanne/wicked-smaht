@@ -27,12 +27,10 @@ import 'firebase/firestore';
   }
 
   // Implement email sign in
-  const userRef = firestore.doc(`users/${user.id}`);
-  const snapshot = await userRef.get();
   export const generateUserDocument = async (user, additionalData) => {
     if (!user) return;
-      const userRef = firestore.doc(`users/${user.uid}`);
-      const snapshot = await userRef.get();
+    const userRef = firestore.doc(`users/${user.uid}`);
+    const snapshot = await userRef.get();
     if (!snapshot.exists) {
       const { email, displayName, photoURL } = user;
       try {
@@ -48,6 +46,7 @@ import 'firebase/firestore';
     }
     return getUserDocument(user.uid);
   };
+  
   const getUserDocument = async uid => {
     if (!uid) return null;
     try {
