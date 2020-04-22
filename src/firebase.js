@@ -19,3 +19,9 @@ import 'firebase/firestore';
   firebase.analytics();
   export const auth = firebase.auth();
   export const firestore = firebase.firestore();
+
+  // Implement Google sign in
+  const provider = new firebase.auth.GoogleAuthProvider();
+  export const signInWithGoogle = () => {
+    auth.signInWithPopup(provider);
+  }

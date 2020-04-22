@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { signInWithGoogle } from '../firebase';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -57,12 +58,12 @@ const SignIn = () => {
         </form>
         <p className="text-center my-3">or</p>
         <button
-          className="bg-red-500 hover:bg-red-600 w-full py-2 text-white">
+          className="bg-red-500 hover:bg-red-600 w-full py-2 text-white" onClick = {(event) => {signInWithGoogle(event, email, password)}}>
           Sign in with Google
         </button>
         <p className="text-center my-3">
           Don't have an account?{" "}
-          <Link to="signUp" className="text-blue-500 hover:text-blue-600">
+          <Link to="signUp" className="text-blue-500 hover:text-blue-600"onClick = {(event) => {signInWithGoogle(event, email, password)}}>
             Sign up here
           </Link>{" "}
           <br />{" "}
