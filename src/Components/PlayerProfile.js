@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default PlayerProfile = () => {
+const PlayerProfile = () => {
   return (
     <div className = "mx-auto w-11/12 md:w-2/4 py-8 px-4 md:px-8">
       <div className="flex border flex-col items-center md:flex-row md:items-start border-blue-400 px-3 py-4">
@@ -23,3 +23,4 @@ export default PlayerProfile = () => {
     </div>
   )
 };
+export default PlayerProfile;

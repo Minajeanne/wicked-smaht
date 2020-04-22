@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default PasswordReset = () => {
+const PasswordReset = () => {
   const [email, setEmail] = useState('');
   const [emailHasBeenSent, setEmailHasBeenSent] = useState(false);
   const [error, setError] = useState(null);
@@ -60,3 +60,4 @@ export default PasswordReset = () => {
     </div>
   );
 };
+export default PasswordReset;

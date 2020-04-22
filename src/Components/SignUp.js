@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 
-export default SignUp = () => {
+const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [displayName, setDisplayName] = useState('');
@@ -95,3 +95,4 @@ export default SignUp = () => {
     </div>
   );
 };
+export default SignUp;
