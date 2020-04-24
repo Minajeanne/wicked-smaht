@@ -8,7 +8,6 @@ const SignIn = () => {
   const [error, setError] = useState(null);
   const signInWithEmailAndPasswordHandler = (event, email, password) => {
     event.preventDefault();
-
     auth.signInWithEmailAndPassword(email, password).catch(error => {
       setError('Error signing in with password and email!');
       console.error('Error signing in with password and email', error);
@@ -67,11 +66,11 @@ const SignIn = () => {
         </button>
         <p className="text-center my-3">
           Don't have an account?{" "}
-          <Link to="signUp" className="text-blue-500 hover:text-blue-600"onClick = {(event) => {signInWithGoogle(event, email, password)}}>
+          <Link to="signUp" className="text-blue-500 hover:text-blue-600">
             Sign up here
           </Link>{" "}
           <br />{" "}
-          <Link to = "passwordReset" className="text-blue-500 hover:text-blue-600">
+          <Link to="passwordReset" className="text-blue-500 hover:text-blue-600">
             Forgot Password?
           </Link>
         </p>
