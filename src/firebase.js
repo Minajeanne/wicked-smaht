@@ -46,8 +46,8 @@ import 'firebase/firestore';
     }
     return getUserDocument(user.uid);
   };
-  
-  const getUserDocument = async uid => {
+
+  export const getUserDocument = async uid => {
     if (!uid) return null;
     try {
       const userDocument = await firestore.doc(`users/${uid}`).get();
@@ -59,3 +59,11 @@ import 'firebase/firestore';
       console.error("Error fetching user", error);
     }
   };
+
+  // firebase.auth().onAuthStateChanged(function(user) {
+  //   if (user) {
+  //     // User is signed in.
+  //   } else {
+  //     // No user is signed in.
+  //   }
+  // });

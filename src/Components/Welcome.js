@@ -1,6 +1,5 @@
 import React from 'react';
 import SignIn from './SignIn';
-import SignUp from './SignUp';
 
 const Welcome = () => {
   return (
@@ -21,7 +20,6 @@ const Welcome = () => {
           </div>
         </div>
       </section>
-
       <SignIn />
     </>
   )
