@@ -20,6 +20,13 @@ import 'firebase/firestore';
   export const auth = firebase.auth();
   export const firestore = firebase.firestore();
 
+  // The Cloud Functions for Firebase SDK to create Cloud Functions and setup triggers.
+  const functions = require('firebase-functions');
+
+  // The Firebase Admin SDK to access the Firebase Realtime Database.
+  const admin = require('firebase-admin');
+  admin.initializeApp();
+
   // Implement Google sign in
   const provider = new firebase.auth.GoogleAuthProvider();
   export const signInWithGoogle = () => {
