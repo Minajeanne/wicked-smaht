@@ -3,7 +3,7 @@ import SignIn from './SignIn';
 
 const Welcome = () => {
   return (
-    <>
+    <div className="container">
       <section className="w-3/6 m-auto flex flex-wrap mt-20">
         <div className="flex flex-wrap">
           <div className="w-full mb-8 p-10 bg-gray-100 relative rounded shadow">
@@ -21,7 +21,7 @@ const Welcome = () => {
         </div>
       </section>
       <SignIn />
-    </>
+    </div>
   )
 };
 

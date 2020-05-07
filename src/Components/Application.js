@@ -19,7 +19,7 @@ debugger
         <PlayerProfile />
       :
       <Switch>
-        <Route exact path='/' component={SignIn} />
+        <Route exact path='/' component={Welcome} />
         <Route exact path='/signUp' component={SignUp} />
         <Route exact path='/passwordReset' component={PasswordReset} />
       </Switch>
