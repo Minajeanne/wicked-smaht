@@ -13,7 +13,7 @@ import PasswordReset from './PasswordReset';
 
 export default function Application() {
   const user = useContext(UserContext);
-debugger
+
     return (
       user ?
         <PlayerProfile />
